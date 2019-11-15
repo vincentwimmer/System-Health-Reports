@@ -2,7 +2,8 @@
 This is a Windows health reporting system built to be automated with Task Scheduler and ran on an IIS server. The script runs a full report on any number of Windows systems you point it to. Once complete, the script compiles a HTML file with the current Date of that report and an HTML file to navigate the reports.
 
 # Screenshots:
-![Front Page](https://imgur.com/RzoCZ0G) ![Report Page](https://imgur.com/mXW5BYs)
+![Imgur](https://i.imgur.com/uzProRG.png)
+![Imgur](https://i.imgur.com/mvlim5J.png)
 
 # Features:
 - Lightweight, Configurable, and Expandable.
