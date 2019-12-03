@@ -52,7 +52,7 @@ Hotfixes
 - Update "servers.txt" with the Computer Names or IP Adresses you wish to get a report on.
 - In "MainExec.ps1" update Lines 33 to 46 with your Email and Exchange Server information or remove completely.
 - Execute MainExec.ps1 to test.
-- At download the scripts are configured to be ran locally for testing.
+- At download, the scripts are configured to be ran locally for testing.
 
  When it's time to configure the script for Task Scheduler 
 - Open each ps1 file and edit the top lines at "$fpath" with the static path to the root folder.
