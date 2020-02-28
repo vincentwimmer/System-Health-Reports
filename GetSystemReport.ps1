@@ -266,15 +266,15 @@ function Get-ComputerReport {
 
             $UpTime = ( "" + ((Get-Date) - $BootTime).Days + " Days : " + ((Get-Date) - $BootTime).Hours + " Hrs : " + ((Get-Date) - $BootTime).Minutes + " Min")
 
-            $cpu = (Get-WmiObject win32_processor -computername SERVER | Measure-Object -property LoadPercentage -Average | Foreach { $_.Average })
+            $cpu = (Get-WmiObject win32_processor -computername $computer | Measure-Object -property LoadPercentage -Average | Foreach { $_.Average })
 
             #Weird powershell fix.
             $avg = "" + $cpu + "%"
 
-            $mem = Get-WmiObject win32_operatingsystem -ComputerName SERVER |
+            $mem = Get-WmiObject win32_operatingsystem -ComputerName $computer |
             Foreach { "{0:N2}" -f ((($_.TotalVisibleMemorySize - $_.FreePhysicalMemory) * 100) / $_.TotalVisibleMemorySize) }
 
-            $net = if ([bool](Test-Connection -ComputerName google.com -Source SERVER -Count 1 -ErrorAction SilentlyContinue)) { $netresult = "Connected" } else { $netresult = "Disconnected" }
+            $net = if ([bool](Test-Connection -ComputerName google.com -Source $computer -Count 1 -ErrorAction SilentlyContinue)) { $netresult = "Connected" } else { $netresult = "Disconnected" }
 
             $AddInfo = [pscustomobject] [ordered] @{ 'Up Time' = $UpTime; 'AverageCpu' = $avg; 'MemoryUsage' = $mem + '%'; 'Internet' = $netresult } | ConvertTo-Html -Fragment
 
