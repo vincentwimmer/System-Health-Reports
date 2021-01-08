@@ -54,6 +54,7 @@ $Style = "
         border-top-style: solid;
         border-top-color: #5c586d;
         border-top-width: 1px;
+        max-width: 450px;
     }
 
     tr:nth-child(odd) {
