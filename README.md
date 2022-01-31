@@ -53,11 +53,10 @@ Hotfixes
 > #### Important: Remote Shell Access must be enabled and correctly configured for elevated access only.
 - In "MainExec.ps1" update Lines 33 to 46 with your Email and Exchange Server information or remove completely.
 - Execute MainExec.ps1 to test.
-- At download, the scripts are configured to be ran locally for testing.
 
- When it's time to configure the script for Task Scheduler 
+At download, the scripts are configured to be ran locally for testing. When it's time to configure the script for Task Scheduler:
 - Open each ps1 file and edit the top lines at "$fpath" with the static path to the root folder.
--- If you skip this step, Task Scheduler will think the base folder is System32.
+> #### If you skip this step, Task Scheduler will think the base folder is System32.
 - Create a New Task in Task Scheduler
 - Use > Action: Start a program
 - Program\script: powershell
