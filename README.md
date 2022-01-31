@@ -1,5 +1,5 @@
 # System-Health-Reports
-This is a Windows health reporting system built to be automated with Task Scheduler and ran on an IIS server. The script runs a full report on any number of Windows systems you point it to. Once complete, the script compiles a HTML file with the current Date of that report and an HTML file to navigate the reports.
+This is a Windows health reporting system built to be automated with Task Scheduler and ran on an IIS server. The script runs a full report on any number of Windows systems you point it to. Once complete, the script compiles an HTML file with the current Date of that report and an HTML file to navigate the reports.
 
 # Screenshots:
 ![Imgur](https://i.imgur.com/uzProRG.png)
@@ -22,12 +22,12 @@ System Information
 - Up Time
 - CPU usage at time of report.
 - Memory usage at time of report.
-- Internet Connectivity by making system ping an external address and returning result.
+- Internet Connectivity by making the system ping an external address and returning the result.
 
 Network Information
-- IPv4 Addressing
-- IPv6 Addressing
-- RAW Address
+- IPv4 Address
+- IPv6 Address
+- MAC Address
 - Address Family
 
 Hardware Information
@@ -35,7 +35,7 @@ Hardware Information
 - Processor: Name, and Socket Designation
 - Memory: Slot ID, Part Number, Speed, and Capacity
 - Storage Controller: Manufacturer, Name, DriverName
-- Disk: Drive Letter, Volume Name, Size, Free Space, Free (%)
+- Disk: Drive Letter, Volume Name, Size, Free Space, and Free Space Percentage
 
 Application Event Log
 
@@ -49,7 +49,8 @@ Hotfixes
 
 # To use:
 - Download all files and store in same folder either locally or on a system with IIS installed.
-- Update "servers.txt" with the Computer Names or IP Adresses you wish to get a report on.
+- Update "servers.txt" with the Computer Names or IP Adresses you wish to get a report on. 
+> #### Important: Remote Shell Access must be enabled and correctly configured for elevated access only.
 - In "MainExec.ps1" update Lines 33 to 46 with your Email and Exchange Server information or remove completely.
 - Execute MainExec.ps1 to test.
 - At download, the scripts are configured to be ran locally for testing.
