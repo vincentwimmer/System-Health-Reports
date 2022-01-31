@@ -71,5 +71,5 @@ At download, the scripts are configured to be ran locally for testing. When it's
 - Most runtime errors are related to the $fpath location. Be sure to check that.
 - When using IIS make sure the folder containing the files is not "Read-Only" and that the user has rights to the folder.
 - Feel free to update the CSS in the CreateHTML and GetSystemReport scripts.
-- Keep an eye on your Reports folder. There's no code setup to delete these files. I recommend clearing anything older than 3months.
+- Keep an eye on your Reports folder. There's no code setup to delete these files. I recommend clearing reports at your own discretion, I prefer to keep them forever.
 
