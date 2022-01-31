@@ -56,7 +56,7 @@ Hotfixes
 
 # To Deploy:
 At download, the scripts are configured to be ran locally for testing. When it's time to configure the script for Task Scheduler:
-- Open each ps1 file and edit the top lines at "$fpath" with the static path to the root folder.
+- Open each ps1 file and edit the top lines at "$fpath" with the folder path to where you've stored the scripts.
 > #### If you skip this step, Task Scheduler will think the base folder is System32.
 - Create a New Task in Task Scheduler
 - Use > Action: Start a program
