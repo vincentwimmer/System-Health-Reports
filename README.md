@@ -47,13 +47,14 @@ Installed Programs
 
 Hotfixes
 
-# To use:
+# To Test:
 - Download all files and store in same folder either locally or on a system with IIS installed.
 - Update "servers.txt" with the Computer Names or IP Adresses you wish to get a report on. 
 > #### Important: Remote Shell Access must be enabled and correctly configured for elevated access only.
 - In "MainExec.ps1" update Lines 33 to 46 with your Email and Exchange Server information or remove completely.
 - Execute MainExec.ps1 to test.
 
+# To Deploy:
 At download, the scripts are configured to be ran locally for testing. When it's time to configure the script for Task Scheduler:
 - Open each ps1 file and edit the top lines at "$fpath" with the static path to the root folder.
 > #### If you skip this step, Task Scheduler will think the base folder is System32.
@@ -66,7 +67,7 @@ At download, the scripts are configured to be ran locally for testing. When it's
  That's it!
 
 # Notes:
-- MainExec.ps1 will produce an error if the system's Event Logs are cleared. This is nothing to worry about.
+- MainExec.ps1 will produce an error if the system's Event Logs are cleared. This is considered a "feature" in a security sense!
 - Most runtime errors are related to the $fpath location. Be sure to check that.
 - When using IIS make sure the folder containing the files is not "Read-Only" and that the user has rights to the folder.
 - Feel free to update the CSS in the CreateHTML and GetSystemReport scripts.
