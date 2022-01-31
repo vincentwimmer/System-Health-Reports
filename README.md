@@ -67,7 +67,7 @@ At download, the scripts are configured to be ran locally for testing. When it's
  That's it!
 
 # Notes:
-- MainExec.ps1 will produce an error if the system's Event Logs are cleared. This is considered a "feature" in a security sense!
+- MainExec.ps1 will produce an error if the system's Event Logs are cleared. In the security realm, this is considered a feature!
 - Most runtime errors are related to the $fpath location. Be sure to check that.
 - When using IIS make sure the folder containing the files is not "Read-Only" and that the user has rights to the folder.
 - Feel free to update the CSS in the CreateHTML and GetSystemReport scripts.
